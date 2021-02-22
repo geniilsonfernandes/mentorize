@@ -1,0 +1,113 @@
+// cores
+$header__color: #f4f3f3;
+$second__color: #06c3a7;
+$text__colorPrimary: #5a7681;
+$text__colorSecond: #353a3e;
+$btn__hover: #09a78f;
+
+.main__header {
+  background: $header__color;
+}
+
+.logo h2 {
+  font-weight: 600;
+  font-size: 16px;
+  color: $second__color;
+}
+.main__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 48px;
+}
+
+.nav__menu__links {
+  display: flex;
+  align-items: center;
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin-right: 32px;
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        color: $text__colorPrimary;
+      }
+    }
+  }
+}
+.nav__menu__btn {
+  display: flex;
+  .btn__login {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 16px 32px;
+    color: $text__colorPrimary;
+    border: 1px solid $text__colorPrimary;
+    margin-right: 22px;
+    background: transparent;
+    transition: all ease-in-out 300ms;
+    &:hover {
+      background: #e9e7e7;
+    }
+  }
+  .btn__signup {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    padding: 16px 32px;
+    color: white;
+    background: $second__color;
+    box-shadow: 7px 4px 16px -3px rgba(20, 121, 103, 0.25);
+    transition: all ease-in-out 300ms;
+    &:hover {
+      background: $btn__hover;
+    }
+  }
+}
+
+.header__cover {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 72px;
+}
+
+.cover__info {
+  margin-bottom: 40px;
+  h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: $text__colorSecond;
+    max-width: 450px;
+    margin-bottom: 8px;
+    span {
+      color: $second__color;
+    }
+  }
+  p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 450px;
+    color: $text__colorPrimary;
+    margin-bottom: 32px;
+  }
+}
+.cover__btn {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  padding: 16px 32px;
+  color: white;
+  background: $second__color;
+  box-shadow: 7px 4px 16px -3px rgba(20, 121, 103, 0.25);
+  transition: all ease-in-out 300ms;
+  &:hover {
+    background: $btn__hover;
+  }
+}
