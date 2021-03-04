@@ -256,7 +256,7 @@ body {
   }
 }
 
-.active {
+.menu__active {
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
   top: 95px;
@@ -413,6 +413,7 @@ body {
 }
 
 .card__slider {
+  -webkit-overflow-scrolling: touch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,7 +487,7 @@ body {
   margin-left: 20px;
 }
 
-.cards__btn {
+.cards__btn, .owl-nav {
   position: relative;
   margin-top: 36px;
   display: -webkit-box;
@@ -498,7 +499,7 @@ body {
   width: 130px;
 }
 
-.cards__btn .btn__back, .cards__btn .btn__next {
+.cards__btn .btn__back, .cards__btn .owl-prev, .cards__btn .btn__next, .cards__btn .owl-next, .owl-nav .btn__back, .owl-nav .owl-prev, .owl-nav .btn__next, .owl-nav .owl-next {
   cursor: pointer;
   background: transparent;
   display: -webkit-box;
@@ -512,16 +513,21 @@ body {
           align-items: center;
   width: 50px;
   height: 50px;
-  border: 1px solid #06c3a7;
-  -webkit-transition: all ease-in-out 200ms;
-  transition: all ease-in-out 200ms;
+  border: 1px solid #06c3a7 !important;
+  -webkit-transition: all ease-in-out 200ms !important;
+  transition: all ease-in-out 200ms !important;
 }
 
-.cards__btn .btn__back:hover, .cards__btn .btn__next:hover {
+.cards__btn .btn__back:hover, .cards__btn .owl-prev:hover, .cards__btn .btn__next:hover, .cards__btn .owl-next:hover, .owl-nav .btn__back:hover, .owl-nav .owl-prev:hover, .owl-nav .btn__next:hover, .owl-nav .owl-next:hover {
   background: #BCE9E2;
 }
 
-.cards__btn .btn__back:focus, .cards__btn .btn__next:focus {
+.cards__btn .btn__back:focus, .cards__btn .owl-prev:focus, .cards__btn .btn__next:focus, .cards__btn .owl-next:focus, .owl-nav .btn__back:focus, .owl-nav .owl-prev:focus, .owl-nav .btn__next:focus, .owl-nav .owl-next:focus {
   background: #BCE9E2;
+}
+
+.cards__btn .btn__back span, .cards__btn .owl-prev span, .cards__btn .btn__next span, .cards__btn .owl-next span, .owl-nav .btn__back span, .owl-nav .owl-prev span, .owl-nav .btn__next span, .owl-nav .owl-next span {
+  color: red;
+  font-size: 18px;
 }
 /*# sourceMappingURL=main.css.map */

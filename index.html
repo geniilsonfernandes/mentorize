@@ -11,12 +11,27 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet">
-   <!-- <link rel="stylesheet" type="text/css" href="./slick/slick.css">
-      <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"> -->
-   <link rel="stylesheet" href="css/glider.css">
-   <script src="js/glider.js"> </script>
+
+
+   <!-- Owl Stylesheets -->
+   <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+   <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
    <link rel="stylesheet" href="css/main.css">
 
+
+
+   <style>
+      .customNextBtn,
+      .customPreviousBtn {
+         float: right;
+         background: #2d9070;
+         color: #fff;
+         padding: 10px;
+         margin-left: 5px;
+         cursor: pointer;
+      }
+   </style>
 </head>
 
 <body>
@@ -97,10 +112,9 @@
          </div>
       </div>
       <div class="card__boxes mwfix ">
-         <div class="card__slider">
+         <div class="card__slider owl-carousel">
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>1 Front End</h3>
                <p>
@@ -113,7 +127,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>2 Front End</h3>
                <p>
@@ -126,7 +139,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>3 Front End</h3>
                <p>
@@ -139,7 +151,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>4 Front End</h3>
                <p>
@@ -152,7 +163,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>5 Front End</h3>
                <p>
@@ -165,7 +175,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>6 Front End</h3>
                <p>
@@ -178,7 +187,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>7 Front End</h3>
                <p>
@@ -191,7 +199,6 @@
             </div>
             <div class="card">
                <div class="card__icon">
-                  <!--  -->
                </div>
                <h3>8 Front End</h3>
                <p>
@@ -204,7 +211,7 @@
             </div>
          </div>
 
-         <div class="cards__btn">
+         <div class="cards__btn owl-nav">
             <button class="btn__back">
                <img src="./assets/svg/back.svg" alt="">
             </button>
@@ -213,40 +220,49 @@
             </button>
          </div>
       </div>
-
-
    </section>
 
 
 
 
+   <!-- javascript -->
+   <script src="owlcarousel/jquery-3.6.0.min.js"></script>
+   <script src="owlcarousel/owl.carousel.min.js"></script>
 
-
-
-
-   <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script> -->
-
+   <!-- <script src="js/app.js"> </script> -->
    <script>
-      window._ = new Glider(document.querySelector('.card__slider'), {
-         slidesToShow: 1, //'auto',
-         slidesToScroll: 1,
-         //itemWidth: 150,
-         draggable: true,
-         duration: 2.0,
-         scrollLock: true,
-         scrollLockDelay: 900,
-         arrows: {
-            prev: '.btn__back',
-            next: '.btn__next'
-         }
-      });
 
 
+  const owl = $('.owl-carousel');
+  owl.owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    items: 4,
+    responsive:{
+        0:{
+         margin:200,
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+  });
+  
+  // Custom Button
+  $('.btn__next').click(function() {
+    owl.trigger('next.owl.carousel');
+  });
+  $('.btn__back').click(function() {
+    owl.trigger('prev.owl.carousel');
+  });
+  
 
    </script>
-   <!-- <script src="js/app.js"> </script> -->
 
 </body>
 

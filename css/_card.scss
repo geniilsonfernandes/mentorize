@@ -39,6 +39,7 @@ $btn__hover: #09a78f;
     position: relative;
 }
 .card__slider{
+    -webkit-overflow-scrolling: touch;
     display: flex;
     transition: all cubic-bezier(0.7, 0.23, 0.27, 1.06) 500ms;
     cursor: pointer;
@@ -96,13 +97,13 @@ $btn__hover: #09a78f;
         
     }
 }
-.cards__btn {
+.cards__btn, .owl-nav {
     position: relative;
     margin-top: 36px;
     display: flex;
     justify-content: space-between;
     width: 130px;
-    .btn__back,.btn__next{
+    .btn__back, .owl-prev ,.btn__next ,.owl-next{
         cursor: pointer;
         background: transparent;
         display: flex;
@@ -110,13 +111,18 @@ $btn__hover: #09a78f;
         align-items: center;
         width: 50px;
         height: 50px;
-        border: 1px solid $second__color;
-        transition: all ease-in-out 200ms;
+        border: 1px solid $second__color !important;
+        transition: all ease-in-out 200ms !important;
+        
         &:hover{
             background: #BCE9E2;
         }
         &:focus{
             background: #BCE9E2;
+        }
+        span{
+            color: red;
+            font-size: 18px;
         }
     }
 
